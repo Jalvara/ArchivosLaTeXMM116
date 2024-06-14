@@ -1,0 +1,30 @@
+\documentclass[11pt,twoside,letterpaper]{book}	
+\input{Preambulo}
+\begin{document}
+%\frontmatter
+%\pagenumbering{roman}
+\begin{titlepage}
+\begin{center}
+\hspace*{-1.75cm}\begin{tabular}{ccc}
+\multirow{4}{*}{\rule{0.5cm}{\textheight} \rule{0.2cm}{\textheight}} && \multirow{4}{*}{\rule{0.2cm}{\textheight}\ \rule{0.5cm}{\textheight}}\\
+& \huge \textbf{Universidad Nacional Autónoma de Honduras} & \\[3cm]
+&\includegraphics[scale=1.5]{EscudoUNAH}&\\[3cm]
+&\huge Apuntes de  Matemática &\\[3cm]
+&\small Jose Alvarenga&
+\end{tabular}
+\end{center}
+\end{titlepage}
+\tableofcontents
+\addcontentsline{toc}{chapter}{Índice general}
+\listoffigures
+\addcontentsline{toc}{chapter}{Índice de figuras}
+\listoftables
+\addcontentsline{toc}{chapter}{Índice de cuadros}
+\input{Introduccion}
+\input{VectoreMatrices}
+Esta es la primera referencia\cite{ref1}
+\cite{ref2}
+\input{Referencias}
+\printindex
+\addcontentsline{toc}{chapter}{Índice Alfabético}
+\end{document}
