@@ -1,0 +1,68 @@
+%Archivo del preámbulo
+\usepackage[utf8]{inputenc} %Ajustando codificacion de los caracteres 
+\usepackage[spanish]{babel} %Para configurar le lenguaje
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx} %Para crear índice alfabético
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries}{}{0pt}{\Huge}
+\makeindex
+\usepackage{lipsum} %Para generar parrafos de ejemplo.
+\usepackage{enumitem} %Para ajustar el estilo de los items enumerados.
+\setlist[enumerate,1]{label=\arabic*.}
+\usepackage{ragged2e} %Para justificar
+\usepackage[top=2cm,bottom=2cm,inner=3cm,outer=2cm]{geometry} %Para modificar los margenes del documento.
+%Seccion para teoremas y definiciones
+\usepackage{amsthm}
+\theoremstyle{plain}%definition,remark
+\newtheorem{theorem}{Teorema}
+\newtheorem{Def}{Definición}[section]
+\newtheorem{Prop}[Def]{Proposición}
+%-------------------------------------
+%\usepackage{enumitem} %Para hacer ajustes a las listas
+\usepackage{graphicx} %Paquete para insertar imagenes
+\graphicspath{{./Imagenes/}}
+\usepackage{float}% para ajustar la posición de un grafico o una tabla
+%-------------------------------------
+%Para referencias internas y externas
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    }
+%Seccion para tablas
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{booktabs}%Para lineas especiales
+\usepackage[table]{xcolor}%Para utilizar color
+\usepackage{colortbl}%Para colo en tablas del entorno tabular
+\usepackage{setspace}%Controlar espacio entre filas
+\definecolor{color1}{RGB}{239,184,16}%Definiendo un color en el formato RGB
+%-------------------------------------------
+%Construyendo un título más elavorado.
+%\maketitle
+%Alineados, saltos de línea, entornos de centrado. 
+%justify,raggedrigth,raggedleft,cenetering,begin{flushleft,flushright,center}
+%ragged puede ser traducido como imperfecto. flush puede ser traducido como alineado.
+%Comandos hfill, vfill, hspace, vspace.
+%Tamaños de letra: tiny,scriptsize,footnotesize,small,normalsize,large,Large,huge,Huge.
+%Listas, viñetas: enumerate, itemize, setlist[]{label=\arabic,\alph,\Alph,\roman,\Roman*.,}
+%\setlist[enumerate,1]{label=\textbf{\arabic*.}} % Añade negrita a los números en el primer nivel
+%Tipografias \textsf{•},\textrm{},\textit{},\texttt{•},\textsc{}mayusculas,\textbf{},\textmd{},\bfseries,\mdserie s,\textsl{Roman inclinado} pequeñas, Mecanografiado,ttfamily, \rmfamily, \sffamily, \itshape,\upshape,\slshape
+%\mainmatter
+%\pagenumbering{arabic}
+%area de encabezados del libro
+\usepackage{fancyhdr}
+\usepackage{afterpage}
+\pagestyle{fancy}
+\fancyhf{}%Limpia los encabezados predeterminados
+\fancyhead[RO,RE]{\thepage}%LE: left even (izquierda, par), RO: right odd (derecha, impar)
+\fancyhead[LO]{\nouppercase{\leftmark}}% Titulo del 	capítulo
+\fancyhead[LE]{\nouppercase{\rightmark}}% Titulo de las secciones
+\fancyhead[C]{Editorial}
+\fancyfoot[LE,RO]{Jose Alvarenga}
+\fancyfoot[LE]{Editorial}
+\renewcommand{\footrule}{{\textcolor{black}{\rule{\headwidth}{0.1cm}}}}
+\renewcommand{\headrule}{{\vskip-0.3cm\textcolor{black}{\rule{\headwidth}{0.1cm}}}}
