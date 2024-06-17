@@ -1,0 +1,62 @@
+\documentclass[twoside,11pt,letterpaper]{article}	
+\usepackage[utf8]{inputenc} %Ajustando codificacion de los caracteres 
+\usepackage[spanish]{babel} %Para configurar le lenguaje
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb} 
+\usepackage{tikz}
+\usepackage{makeidx} %Para crear índice alfabético
+\usepackage{lipsum} %Para generar parrafos de ejemplo.
+\usepackage{enumitem} %Para ajustar el estilo de los items enumerados.
+\setlist[enumerate,1]{label=\arabic*.}
+\usepackage{ragged2e} %Para justificar
+\usepackage[margin=2.5cm]{geometry} %Para modificar los margenes del documento.
+%Seccion para teoremas y definiciones
+\usepackage{amsthm}
+\theoremstyle{plain}%definition,remark
+\newtheorem{theorem}{Teorema}
+\newtheorem{Def}{Definición}[section]
+\newtheorem{Prop}[Def]{Proposición}
+%-------------------------------------
+%\usepackage{enumitem} %Para hacer ajustes a las listas
+\usepackage{graphicx} %Paquete para insertar imagenes
+\graphicspath{{./Imagenes/}}
+\usepackage{float}% para ajustar la posición de un grafico o una tabla
+%-------------------------------------
+\usepackage{hyperref}
+\title{\Huge Universidad Nacional Autónoma de Honduras\\
+\huge Figuras construidas en TikZ}
+\author{Jose Alvarenga}
+\makeindex
+\begin{document}
+%Construyendo un título más elavorado.
+\maketitle
+\begin{figure}[H]
+\centering
+\caption{En este apartado dibujaremos una línea}
+\begin{tikzpicture}
+\draw[fill=blue!50,draw=red] (0,0) circle (1cm);
+\filldraw (0,0) circle (1pt);
+\draw (0,0)--(0,1);
+\draw (1,0)--(2,0)--(2,1)--(1,1)--(1,0);
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[H]
+\centering
+\caption{En este apartado dibujaremos una línea curva}
+\begin{tikzpicture}[scale=2,rotate=15]
+\draw[step=0.5cm,draw=gray!50] (0,0) grid (3,2);
+\draw (0,0)..controls(1,1.5) and (2,2)..(3,2);
+\draw (0,0)--(0,2);
+\draw (0,0)--(2,0);
+\draw (0,0) rectangle (3,2);
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[H]
+\centering
+\caption{En este apartado dibujaremos una línea curva}
+\begin{tikzpicture}[scale=2,rotate=0]
+\draw (3,2) arc (25:100:2cm);
+\end{tikzpicture}
+\end{figure}
+\end{document}
